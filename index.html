@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - BTS SIO</title>
+    <!-- Animation ScrollReveal -->
+<script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Lien pour charger les logos technologiques (Devicon) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Animation ScrollReveal -->
+     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+     <script src="https://unpkg.com/scrollreveal"></script>
+    
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div id="scroll-progress"></div>
+
+    <!-- Barre de navigation avec les onglets -->
+    <header>
+        <div class="branding">
+        <div class="logo">Mon Portfolio</div>
+        <span class="glitch-text">Killian Burzi</span>
+    </div>
+        <nav>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#presentation">À propos</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#outils">Outils & Logiciels</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#stage">Stage</a></li>
+                <li><a href="#veille">Veille</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  <!-- Section 1 : Accueil -->
+<section id="accueil" class="hero">
+    <h1>Bienvenue sur mon portfolio ! <span class="emoji-wave">👋</span></h1>
+
+    <!-- Le bouton doit être DANS la section -->
+    <a href="fichiers/CV_Killian_Burzi_BTS_SIO_SISR-5.pdf" target="_blank" class="btn-cv">
+        📄 Mon CV
+    </a>
+</section> <!-- Ferme la section ICI -->
+
+<div class="stats-bar">
+
+    <div class="stat-item">
+        <span class="stat-number">BTS SIO</span>
+        <span class="stat-label">Option SISR</span>
+    </div>
+   <div class="stat-item">
+    <span class="stat-number">5 sem.</span>
+    <span class="stat-label">Stage en Entreprise</span>
+</div>
+    <div class="stat-item">
+        <span class="stat-number">2026</span>
+        <span class="stat-label">Promotion</span>
+    </div>
+</div>
+
+   <!-- Section 2 : À propos (Format Terminal Cyber) -->
+<section id="presentation" class="container">
+    <h2><span class="emoji-float">👨‍💻</span> À propos de moi</h2>
+
+    <div class="terminal-window">
+        <div class="terminal-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="terminal-title">bash -- killian@sisr-srv: ~</span>
+        </div>
+        <div class="terminal-body">
+            <p><span class="prompt">killian@sisr-srv:~$</span> whoami</p>
+            <p class="response">> Killian Burzi - Étudiant en 1ère année BTS SIO (Option SISR)</p>
+            
+            <p><span class="prompt">killian@sisr-srv:~$</span> cat profil.txt</p>
+            <p class="response">> Passionné par l'administration système, la gestion de réseaux et la cybersécurité. Mon objectif est de concevoir, sécuriser et maintenir des infrastructures informatiques performantes.</p>
+
+            <p><span class="prompt">killian@sisr-srv:~$</span> systemctl status status-competences</p>
+            <p class="response status-ok">> [ACTIVE] Operational - Active Directory, Linux, Cisco, GLPI, Virtualisation.</p>
+        </div>
+    </div>
+</section>
+    
+
+    <!-- Section 3 : Compétences (SISR / SLAM) -->
+    <section id="competences" class="container">
+        <h2><span class="emoji-float">💻</span> Mes Compétences</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Développement</h3>
+                <p>HTML5, CSS3, JavaScript, PHP, MySQL...</p>
+            </div>
+            <div class="card">
+                <h3>Réseaux & Systèmes</h3>
+                <p>Configuration de réseaux, Linux, Windows Server, Virtualisation...</p>
+            </div>
+            <div class="card">
+                <h3>Outils</h3>
+                <p>Git, VS Code, Cisco Packet Tracer, VirtualBox...</p>
+            </div>
+        </div>
+    </section>
+   <!-- Section : Outils & Logiciels SISR -->
+<section id="outils" class="container">
+    <h2><span class="emoji-float">🛠️</span> Outils & Logiciels</h2>
+    
+    <div class="grid">
+
+        <!-- Carte 1 : Systèmes & Virtualisation -->
+        <div class="card">
+            <h3>Systèmes & Virtualisation</h3>
+            <ul class="outils-list">
+                <li><i class="devicon-windows8-original colored"></i> <strong>Windows Server</strong> (AD DS, DNS, DHCP)</li>
+                <li><i class="devicon-linux-plain colored"></i> <strong>Linux</strong> (Debian, Ubuntu Server)</li>
+                <li><i class="devicon-debian-plain colored"></i> <strong>Debian</strong></li>
+                <li><i class="devicon-bash-plain colored"></i> <strong>Bash / PowerShell</strong></li>
+                <li>
+    <i class="devicon-virtualbox-plain colored"></i>
+    <span class="tool-name">VirtualBox</span>
+    <span class="tool-desc">(Debian, Windows Server)</span>
+</li>
+            </ul>
+        </div>
+
+        <!-- Carte 2 : Réseau & Développement -->
+        <div class="card">
+            <h3>Réseau & Outils Dev</h3>
+            <ul class="outils-list">
+                <li><i class="devicon-vscode-plain colored"></i> <strong>VS Code</strong></li>
+                <li><i class="devicon-git-plain colored"></i> <strong>Git</strong></li>
+                <li><i class="devicon-github-original colored"></i> <strong>GitHub</strong></li>
+                <li><i class="devicon-putty-plain colored"></i> <strong>PuTTY / SSH</strong></li>
+            </ul>
+        </div>
+
+        <!-- Carte 3 : Web & Bases de données -->
+        <div class="card">
+            <h3>Web & Data</h3>
+            <ul class="outils-list">
+                <li><i class="devicon-html5-plain colored"></i> <strong>HTML5</strong></li>
+                <li><i class="devicon-css3-plain colored"></i> <strong>CSS3</strong></li>
+                <li><i class="devicon-mysql-plain colored"></i> <strong>MySQL / MariaDB</strong></li>
+                <li><i class="devicon-php-plain colored"></i> <strong>PHP</strong></li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+    <!-- Section 4 : Projets -->
+    <section id="projets" class="container">
+       <h2><span class="emoji-float">🚀</span> Mes Projets</h2>
+        <div class="grid">
+            <div class="card">
+            <span class="badge badge-pulse">En cours</span>
+            <h3>Projet 1 : Portfolio Web</h3>   
+             <p>Création d'un portfolio numérique responsive en HTML/CSS/JS.</p>
+        </div>
+            <div class="card">
+                <h3>Projet 2 : Création d'un site pour An Délices</h3>
+                <p>Création d'un site internet pour An Délice Buffets en HTML/CSS/JS. (a venir)</p>
+            </div>
+        </div>
+    </section>
+    <!-- Section 5 : Stage -->
+<section id="stage" class="container">
+   <h2><span class="emoji-float">💼</span> Mes Stages et experiences</h2>
+
+    <!-- Carte du stage de 1ère année -->
+    <div class="stage-card">
+        <div class="stage-header">
+            <h3>Stage de 1ère année – [Entreprise : ???]</h3>
+            <span class="stage-date">Mai 2027 - Juin 2027 (5 semaines)</span>
+        </div>
+        <p class="stage-description">
+            Présentation rapide de l'entreprise (ex: Entreprise spécialisée dans le développement de solutions web et la gestion de parc informatique).
+        </p>
+        
+        <h4>Missions réalisées :</h4>
+        <ul class="stage-missions">
+            <li>Mission 1 : [ex: Participation au développement d'une application web]</li>
+            <li>Mission 2 : [ex: Assistance au support utilisateur et gestion d'incidents]</li>
+            <li>Mission 3 : [ex: Rédaction de documentations techniques]</li>
+        </ul>
+
+        <div class="stage-techs">
+            <span>HTML/CSS</span>
+            <span>PHP</span>
+            <span>SQL</span>
+            <span>GLPI</span>
+        </div>
+    </div>
+<section id="veille" class="container">
+    <h2><span class="emoji-float">🔍</span> Veille Technologique</h2>
+
+    <div class="cards-grid">
+        <!-- Carte 1 -->
+        <div class="card-veille card">
+            <div class="card-header">
+                <h3>🛡️ Cybersécurité en SISR</h3>
+                <span class="tag tag-impose">Sujet imposé</span>
+            </div>
+            <p class="card-desc">Suivi des nouvelles vulnérabilités (CVE), menaces Ransomware, sécurisation des réseaux et architectures Zero Trust.</p>
+            <div class="card-footer">
+                <span class="label">Sources :</span>
+                <span class="value">ANSSI, CERT-FR, ZDNet, Feedly</span>
+            </div>
+        </div>
+
+        <!-- Carte 2 -->
+        <div class="card-veille card">
+            <div class="card-header">
+                <h3>🤖 L'IA dans l'Admin Système</h3>
+                <span class="tag tag-impose">Sujet imposé</span>
+            </div>
+            <p class="card-desc">Impact des outils d'IA (AIOps) sur l'automatisation, la détection d'anomalies réseau et le scripting PowerShell/Bash.</p>
+            <div class="card-footer">
+                <span class="label">Sources :</span>
+                <span class="value">LeMondeInformatique, IT-Connect, Reddit</span>
+            </div>
+        </div>
+
+        <!-- Carte 3 -->
+        <div class="card-veille card">
+            <div class="card-header">
+                <h3>🚨 Failles Critiques & Zero-Day</h3>
+                <span class="tag tag-libre">Sujet libre</span>
+            </div>
+            <p class="card-desc">Suivi en temps réel des vulnérabilités émergentes, des avis de sécurité et application rapide des patchs.</p>
+            <div class="card-footer">
+                <span class="label">Sources :</span>
+                <span class="value">CERT-FR, ANSSI, NVD (NIST), ZDNet</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+   <!-- Section Contact -->
+<section id="contact" class="container">
+    <h2><span class="emoji-float">📬</span> Contact</h2>
+    <p>Un projet, une opportunité de stage ou une question ? N'hésitez pas à me laisser un message !</p>
+
+    <form class="contact-form" action="https://formspree.io/f/mjykpqok" method="POST">
+        <div class="form-group">
+            <label for="name">Nom / Prénom</label>
+            <input type="text" id="name" name="name" required placeholder="Votre nom">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Adresse Email</label>
+            <input type="email" id="email" name="email" required placeholder="votre.email@exemple.com">
+        </div>
+
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Votre message..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Envoyer le message 🚀</button>
+
+    </form>
+  
+</section>
+</section>
+</section>
+</body>
+</html>

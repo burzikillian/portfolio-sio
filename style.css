@@ -1,0 +1,827 @@
+/* Style Général */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fffefd;
+    color: #333333;
+    line-height: 1.6;
+    scroll-behavior: smooth; /* Défilement doux lors du clic sur les onglets */
+}
+
+header {
+    background-color: rgba(0, 1, 5, 0.85); /* Ton marron d'origine avec 85% d'opacité */
+    backdrop-filter: blur(10px); /* L'effet de flou dépoli */
+    -webkit-backdrop-filter: blur(10px);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #38bdf8;
+    background-color: rgba(255, 255, 255, 0.12); /* Légère transparence blanche */
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.15);
+}
+
+/* Sections */
+.hero {
+    background: linear-gradient(135deg, #000000, #6196d2);
+    color: white;
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.container h2 {
+    color: #0f172a;
+    border-bottom: 3px solid #38bdf8;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+/* Grille pour les compétences et projets */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background: rgb(235, 227, 214);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    color: #0284c7;
+    margin-bottom: 0.5rem;
+}
+
+/* Bouton Contact */
+button {
+    background-color: #0284c7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #0369a1;
+}
+/* Style de la section Stage */
+.stage-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-left: 4px solid #38bdf8; /* Liseré bleu sur le côté */
+    margin-bottom: 2rem;
+}
+
+.stage-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.stage-header h3 {
+    color: #0f172a;
+    font-size: 1.3rem;
+}
+
+.stage-date {
+    background-color: #e0f2fe;
+    color: #0369a1;
+    font-weight: bold;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.stage-description {
+    margin-bottom: 1rem;
+    color: #475569;
+}
+
+.stage-card h4 {
+    color: #0284c7;
+    margin-bottom: 0.5rem;
+}
+
+.stage-missions {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #334155;
+}
+
+.stage-missions li {
+    margin-bottom: 0.4rem;
+}
+
+/* Badges pour les technologies utilisées */
+.stage-techs {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.stage-techs span {
+    background-color: #f1f5f9;
+    color: #334155;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+/* Style des icônes dans les listes d'outils */
+.outils-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px dashed #e2e8f0;
+    color: #475569;
+    font-size: 0.95rem;
+}
+
+.outils-list li i {
+    font-size: 1.4rem; /* Taille du logo */
+}
+/* Style du formulaire de contact */
+.contact-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 1.5rem auto 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #0284c7;
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: #0284c7;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #0369a1;
+}
+/* Animation fluide sur toutes les cartes */
+.card, .stage-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Au survol : la carte monte légèrement et l'ombre s'agrandit */
+.card:hover, .stage-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+.cursor {
+    font-weight: bold;
+    color: #38bdf8;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+/* Animation de la main qui salue 👋 */
+.emoji-wave {
+    display: inline-block;
+    animation: wave 1.8s infinite;
+    transform-origin: 70% 70%;
+}
+
+@keyframes wave {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(14deg); }
+    20% { transform: rotate(-8deg); }
+    30% { transform: rotate(14deg); }
+    40% { transform: rotate(-4deg); }
+    50% { transform: rotate(10deg); }
+    60% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* Animation pour les émojis qui flottent de bas en haut (🚀, 💡, 💻) */
+.emoji-float {
+    display: inline-block;
+    animation: float 2.5s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+/* Barre de statistiques */
+.stats-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #1e293b;
+    color: white;
+    padding: 1.5rem;
+    margin: 2rem auto;
+    max-width: 900px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+/* Badge avec effet de pulsation */
+.badge {
+    display: inline-block;
+    padding: 3px 10px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.badge-pulse {
+    background-color: #fef3c7;
+    color: #d97706;
+    position: relative;
+}
+
+/* Petit point qui clignote */
+.badge-pulse::before {
+    content: '';
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #d97706;
+    margin-right: 6px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.3; transform: scale(1.3); }
+    100% { opacity: 1; transform: scale(1); }
+}
+/* Style pour l'onglet actif */
+nav a.active {
+    color: #38bdf8;
+    border-bottom: 2px solid #38bdf8;
+    padding-bottom: 4px;
+}
+.btn-cv {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #0284c7, #38bdf8);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-cv:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(56, 189, 248, 0.5);
+}
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Reste en arrière-plan */
+    background-color: #93a1cb; /* Fond sombre high-tech */
+}
+.glitch-text {
+    position: relative;
+    display: inline-block;
+}
+
+.glitch-text:hover {
+    text-shadow: 2px 0 #ef4444, -2px 0 #38bdf8;
+    animation: glitch 0.3s infinite;
+}
+
+@keyframes glitch {
+    0% { transform: translate(0) }
+    20% { transform: translate(-2px, 2px) }
+    40% { transform: translate(-2px, -2px) }
+    60% { transform: translate(2px, 2px) }
+    80% { transform: translate(2px, -2px) }
+    100% { transform: translate(0) }
+}
+/* --- HABILLAGE HIGH-TECH & CYBER --- */
+
+/* Palette Globale */
+body {
+    background-color: #0f172a; /* Fond sombre moderne */
+    color: #f1f5f9;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Titres de Section */
+h2 {
+    color: #38bdf8;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+}
+
+/* Cartes avec effet Néon au survol */
+.card, .stage-card {
+    background: #1e293b;
+    border: 1px solid rgba(56, 189, 248, 0.15);
+    border-radius: 12px;
+    padding: 1.8rem;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover, .stage-card:hover {
+    transform: translateY(-6px);
+    border-color: #38bdf8;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.35), 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* --- TERMINAL LINUX (À PROPOS) --- */
+.terminal-window {
+    background-color: #0b0f19;
+    border-radius: 10px;
+    border: 1px solid #1e293b;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+    font-family: 'Fira Code', 'Courier New', monospace;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.terminal-header {
+    background-color: #161b22;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid #1e293b;
+}
+
+.dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+.red { background-color: #ff5f56; }
+.yellow { background-color: #ffbd2e; }
+.green { background-color: #27c93f; }
+
+.terminal-title {
+    color: #64748b;
+    font-size: 0.85rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.terminal-body {
+    padding: 1.2rem;
+    color: #e2e8f0;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.prompt { color: #38bdf8; font-weight: bold; }
+.response { color: #94a3b8; margin-left: 1rem; margin-bottom: 0.8rem; }
+.status-ok { color: #4ade80; font-weight: 600; }
+
+/* --- ICONES LOGICIELS & HOVER EFFECTS --- */
+.outils-list li i {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.outils-list li:hover i {
+    transform: scale(1.3) rotate(6deg);
+    filter: drop-shadow(0 0 8px #38bdf8);
+}
+/* Correction du style de la section À propos */
+#presentation {
+    background-color: #0f172a; /* Fond sombre high-tech */
+    padding: 3rem 2rem;
+    border-radius: 12px;
+}
+
+#presentation h2 {
+    color: #38bdf8; /* Cyan lumineux */
+    text-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+}
+/* --- HABILLAGE GLOBAL CYBER & CLOUD --- */
+
+/* Fond général et police */
+body {
+    background-color: #0f172a; /* Fond bleu nuit très sombre */
+    color: #e2e8f0;            /* Texte clair lisible */
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Sections principales */
+section.container {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 2rem;
+}
+
+/* Tous les titres H2 du site */
+h2 {
+    color: #38bdf8; /* Cyan néon */
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+    border-bottom: 2px solid rgba(56, 189, 248, 0.2);
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+/* Re-styliser TOUTES les cartes (Compétences, Projets, Outils) */
+.card, .stage-card {
+    background: #1e293b; /* Fond carte sombre */
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    border-radius: 12px;
+    padding: 1.8rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    transition: all 0.35s ease;
+}
+
+/* Animation Néon au survol */
+.card:hover, .stage-card:hover {
+    transform: translateY(-6px);
+    border-color: #38bdf8;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.35), 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* Couleur des sous-titres dans les cartes */
+.card h3, .stage-card h3 {
+    color: #f8fafc;
+    font-size: 1.3rem;
+}
+
+/* Ajustement des listes de logiciels */
+.outils-list li {
+    border-bottom: 1px dashed #334155;
+    color: #cbd5e1;
+}
+
+.outils-list strong {
+    color: #38bdf8;
+}
+/* Formulaire de Contact en mode Cyber */
+.contact-form {
+    background: #1e293b;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 650px;
+    margin: 2rem auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.form-group label {
+    color: #38bdf8;
+}
+
+.form-group input,
+.form-group textarea {
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    color: #f8fafc;
+    border-radius: 8px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 8px rgba(56, 189, 248, 0.4);
+}
+
+.btn-submit {
+    background: linear-gradient(135deg, #0284c7, #38bdf8);
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.btn-submit:hover {
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
+}
+/* Halo de lumière interactif */
+.card, .stage-card {
+    position: relative;
+}
+
+.card::before, .stage-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(600px circle at var(--x, 50%) var(--y, 50%), rgba(56, 189, 248, 0.15), transparent 40%);
+    border-radius: inherit;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.card:hover::before, .stage-card:hover::before {
+    opacity: 1;
+}
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #0284c7, #38bdf8);
+    width: 0%;
+    z-index: 2000;
+    transition: width 0.1s ease-out;
+}
+.card, .stage-card {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.card:hover, .stage-card:hover {
+    transform: translateY(-5px) rotateX(2deg) rotateY(-2deg);
+}
+/* Alignement propre de chaque ligne d'outil */
+.outils-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    border-bottom: 1px dashed rgba(56, 189, 248, 0.15);
+    transition: transform 0.2s ease;
+}
+
+/* Taille de l'icône et animation au survol */
+.outils-list li i {
+    font-size: 1.4rem;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.outils-list li:hover i {
+    transform: scale(1.25) rotate(4deg);
+    filter: drop-shadow(0 0 8px #38bdf8);
+}
+
+.tool-name {
+    color: #38bdf8;
+    font-weight: bold;
+}
+
+.tool-desc {
+    color: #94a3b8;
+    font-size: 0.85rem;
+}
+#accueil {
+    background-color: #0f172a; /* Fond bleu nuit sombre */
+    padding: 3rem 2rem;
+    text-align: center;
+}
+/* Cartes de veille */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.card-veille {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet de surbrillance au survol (Glow Effect) */
+.card-veille {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-veille:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.4),
+                0 0 40px rgba(56, 189, 248, 0.1);
+}
+
+.card-header h3 {
+    color: #f8fafc;
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Badges */
+.tag {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.tag-impose {
+    background: rgba(56, 189, 248, 0.15);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.tag-libre {
+    background: rgba(168, 85, 247, 0.15);
+    color: #c084fc;
+    border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.card-desc {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    flex-grow: 1; /* Aligne le bas de toutes les cartes */
+}
+
+/* Alignement parfait des sources */
+.card-footer {
+    display: flex;
+    gap: 8px;
+    font-size: 0.85rem;
+    padding-top: 1rem;
+    border-top: 1px dashed #334155;
+}
+
+.card-footer .label {
+    color: #38bdf8;
+    font-weight: bold;
+    white-space: nowrap; /* Empêche "Sources :" de se couper */
+}
+
+.card-footer .value {
+    color: #cbd5e1;
+}
+/* Alignement et cartes de veille */
+.card-veille {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-header h3 {
+    color: #f8fafc;
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+}
+
+.tag-impose {
+    background: rgba(56, 189, 248, 0.15);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.tag-libre {
+    background: rgba(168, 85, 247, 0.15);
+    color: #c084fc;
+    border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.card-desc {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.card-footer {
+    display: flex;
+    gap: 8px;
+    font-size: 0.85rem;
+    padding-top: 1rem;
+    border-top: 1px dashed #334155;
+}
+
+.card-footer .label {
+    color: #38bdf8;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.card-footer .value {
+    color: #cbd5e1;
+}
